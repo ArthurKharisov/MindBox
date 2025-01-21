@@ -9,6 +9,8 @@ import React, {
 import { AppContext } from '../../context/AppContext.ts';
 import styles from './styles.module.css'
 
+import DownIcon from '../../assets/down-icon.png'
+
 /**
  * Компонент добавления новых задач
  * @constructor
@@ -60,8 +62,9 @@ function Input(): ReactElement {
     <div className={styles.inputContainer}>
       <div className={styles.iconContainer}>
         <img
+          alt='icon'
           className={styles.icon}
-          src='src/assets/down-icon.png'
+          src={DownIcon}
         />
       </div>
       <input
