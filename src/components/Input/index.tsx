@@ -9,7 +9,7 @@ import React, {
 import { AppContext } from '../../context/AppContext.ts';
 import styles from './styles.module.css'
 
-import DownIcon from '../../assets/down-icon.png'
+import DownIcon from './down-icon.png'
 
 /**
  * Компонент добавления новых задач
