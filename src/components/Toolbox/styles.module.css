@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 36px;
+  align-items: center;
+  padding: 0 8px;
+}
+
+
+.switchToggle input {
+  position: absolute;
+  opacity: 0;
+}
+.switchToggle input + label {
+  padding: 3px;
+  cursor: pointer;
+}
+.switchToggle input:checked + label {
+  border: 1px solid #e9dad9;
+  border-radius: 4px;
+}
+
+.clearCompletedButton {
+  cursor: pointer;
+}
+
+.leftBox {
+  min-width: 90px;
+}

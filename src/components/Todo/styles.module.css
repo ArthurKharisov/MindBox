@@ -1,0 +1,108 @@
+.root {
+  display: flex;
+  height: 40px;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 40px;
+  max-width: 500px;
+  top: 0;
+}
+
+.line {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 12px;
+}
+
+.lineText {
+  width: 100%;
+  max-width: 425px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 4px;
+}
+
+.lineTextFinished {
+  text-decoration: line-through;
+  color: #a1a1a1;
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  padding-top: 2px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+}
+
+.controlIndicator {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  height: 20px;
+  width: 20px;
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 20px;
+}
+
+.control:hover input ~ .controlIndicator,
+.control input:focus ~ .controlIndicator {
+  background: #ffffff;
+}
+
+.control input:checked ~ .controlIndicator {
+  background: #ffffff;
+}
+
+.control:hover input:not([disabled]):checked ~ .controlIndicator,
+.control input:checked:focus ~ .controlIndicator {
+  background: #ffffff;
+}
+
+.controlIndicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.control input:checked ~ .controlIndicator:after {
+  display: block;
+}
+
+.controlCheckbox .controlIndicator:after {
+  left: 7px;
+  top: 3px;
+  width: 3px;
+  height: 9px;
+  border: solid #2bcd68;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.controlCheckbox input:disabled ~ .controlIndicator:after {
+  border-color: #ffffff;
+}
+
+.lineDelete {
+  opacity: 0;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.line:hover .lineDelete {
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  opacity: 1;
+}

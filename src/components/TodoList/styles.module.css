@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 328px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.emptyList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 328px;
+  color: #d3d3d3;
+}
+
